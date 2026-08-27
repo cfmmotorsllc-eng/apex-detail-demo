@@ -30,11 +30,11 @@
     --txt:#f4f4f6; --mut:#8b8b93; --accent:#4da3ff; --gold:#e8c88a;
     --dsp:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;
     --ui:Inter,ui-sans-serif,system-ui,sans-serif;
-    --topbar:110px; /* measured at runtime; this is the fallback */
+    --topbar:74px; /* nav height; the demo strip scrolls away above it */
   }
   *{margin:0;padding:0;box-sizing:border-box}
   @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-  body{font-family:var(--ui);background:var(--bg);color:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-top:var(--topbar)}
+  body{font-family:var(--ui);background:var(--bg);color:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   h1,h2,h3,.dsp{font-family:var(--dsp);letter-spacing:-.02em;line-height:1.08}
   a{color:inherit;text-decoration:none}
   img{display:block;width:100%;height:100%;object-fit:cover}
@@ -57,9 +57,8 @@
   .h2{font-size:clamp(30px,5vw,48px);font-weight:600;margin:14px 0}
   .sub{color:var(--mut);max-width:560px;margin:0 auto;font-size:17px}
   /* top bar (demo strip + nav travel together) */
-  .topbar{position:fixed;top:0;left:0;right:0;z-index:60}
   .demo{background:var(--gold);color:#161000;text-align:center;font-size:12.5px;font-weight:600;padding:8px 16px;font-family:var(--dsp);letter-spacing:.02em}
-  nav{position:relative;background:rgba(10,10,11,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+  nav{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
   .brand{font-family:var(--dsp);font-weight:700;font-size:21px;letter-spacing:.02em;white-space:nowrap}
   .brand b{color:var(--accent);font-weight:700}
@@ -67,20 +66,23 @@
   .nl{display:flex;gap:34px;align-items:center}
   .nl a{color:var(--mut);font-size:14.5px;font-weight:500;transition:.2s}
   .nl a:hover{color:var(--txt)}
-  .burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:transparent;border:1px solid var(--line);border-radius:12px;color:var(--txt);cursor:pointer}
-  .burger svg{width:20px;height:20px}
-  .burger .x{display:none}
-  .burger[aria-expanded="true"] .x{display:block}
-  .burger[aria-expanded="true"] .m{display:none}
+  /* mobile menu: a <details> disclosure, so it works with JS disabled */
+  .menu{display:none;position:relative}
+  .menu summary{list-style:none;cursor:pointer;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;
+                display:flex;align-items:center;justify-content:center;color:var(--txt);background:transparent}
+  .menu summary::-webkit-details-marker{display:none}
+  .menu summary svg{width:20px;height:20px}
+  .menu[open] summary{border-color:var(--accent)}
+  .menu-panel{position:absolute;top:calc(100% + 10px);right:0;min-width:212px;background:var(--panel);
+              border:1px solid var(--line);border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:2px;
+              box-shadow:0 18px 40px rgba(0,0,0,.55)}
+  .menu-panel a:not(.btn){padding:11px 14px;border-radius:10px;font-size:15px;color:var(--txt)}
+  .menu-panel a:not(.btn):hover{background:var(--card)}
+  .menu-panel .btn{justify-content:center;margin-top:8px}
   @media(max-width:860px){
     .navright{gap:10px}
-    .burger{display:flex}
-    .nl{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;
-        background:var(--bg);border-bottom:1px solid var(--line);padding:4px 24px 16px;
-        box-shadow:0 18px 40px rgba(0,0,0,.5)}
-    .nl[data-open]{display:flex}
-    .nl a{padding:14px 2px;font-size:16px;border-bottom:1px solid var(--line)}
-    .nl a:last-child{border-bottom:0}
+    .nl{display:none}
+    .menu{display:block}
     .navright .btn{padding:12px 18px;font-size:14px}
   }
   @media(max-width:400px){.brand{font-size:18px}.navright .btn{padding:11px 14px;font-size:13px}}
@@ -164,27 +166,32 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="topbar" id="topbar">
-  <div class="demo">DEMO — a sample custom site. Yours would use your name, photos &amp; reviews.</div>
-  <nav aria-label="Main">
-    <div class="wrap">
-      <a class="brand" href="#top">APEX <b>/</b> DETAIL</a>
-      <div class="navright">
-        <div class="nl" id="menu">
+<div class="demo">DEMO — a sample custom site. Yours would use your name, photos &amp; reviews.</div>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">APEX <b>/</b> DETAIL</a>
+    <div class="navright">
+      <div class="nl">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <a href="#book" class="btn accent">Book a Detail</a>
+      <details class="menu" id="menu">
+        <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <div class="menu-panel">
           <a href="#services">Services</a>
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#reviews">Reviews</a>
+          <a href="#book" class="btn accent">Book a Detail</a>
         </div>
-        <a href="#book" class="btn accent">Book a Detail</a>
-        <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
-          <svg class="m" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-          <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
+      </details>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
 
 <main id="main">
 <header class="hero">
@@ -343,42 +350,17 @@
 </script>
 
 <script>
+// The menu works without this: <details> opens and closes on its own.
+// This only adds the two behaviours <details> lacks natively.
 (function () {
-  var topbar = document.getElementById('topbar');
-  var burger = document.getElementById('burger');
   var menu = document.getElementById('menu');
-
-  function syncTopbarHeight() {
-    document.documentElement.style.setProperty('--topbar', topbar.offsetHeight + 'px');
-  }
-  syncTopbarHeight();
-  window.addEventListener('load', syncTopbarHeight);
-  if ('ResizeObserver' in window) new ResizeObserver(syncTopbarHeight).observe(topbar);
-  else window.addEventListener('resize', syncTopbarHeight);
-
-  function setMenu(open) {
-    burger.setAttribute('aria-expanded', String(open));
-    if (open) menu.setAttribute('data-open', ''); else menu.removeAttribute('data-open');
-  }
-  burger.addEventListener('click', function () {
-    setMenu(burger.getAttribute('aria-expanded') !== 'true');
-  });
-  menu.addEventListener('click', function (e) {
-    if (e.target.closest('a')) setMenu(false);
-  });
+  if (!menu) return;
+  function close() { menu.removeAttribute('open'); }
+  menu.addEventListener('click', function (e) { if (e.target.closest('.menu-panel a')) close(); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
-      setMenu(false);
-      burger.focus();
-    }
+    if (e.key === 'Escape' && menu.hasAttribute('open')) { close(); menu.querySelector('summary').focus(); }
   });
-  document.addEventListener('click', function (e) {
-    if (burger.getAttribute('aria-expanded') === 'true' && !topbar.contains(e.target)) setMenu(false);
-  });
-  // A menu left open while resizing to desktop would otherwise reopen on the way back down.
-  window.addEventListener('resize', function () {
-    if (window.innerWidth > 860) setMenu(false);
-  });
+  document.addEventListener('click', function (e) { if (!menu.contains(e.target)) close(); });
 })();
 </script>
 </body>
