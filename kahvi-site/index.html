@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kahvi House — Coffee, Matcha &amp; Red Bull Infusions</title>
+<meta name="description" content="The Kahvi House — espresso, matcha, lemonade and Red Bull infusions. Open Monday to Saturday, 9 to 4.">
+<link rel="canonical" href="https://thekahvihouse.com/">
+<meta name="theme-color" content="#1B1512">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Kahvi House">
+<meta property="og:title" content="The Kahvi House — Coffee, Matcha &amp; Red Bull Infusions">
+<meta property="og:description" content="Espresso, matcha, lemonade and Red Bull infusions. Open Monday to Saturday, 9 to 4.">
+<meta property="og:url" content="https://thekahvihouse.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Kahvi House">
+<meta name="twitter:description" content="Espresso, matcha, lemonade and Red Bull infusions. Open Monday to Saturday, 9 to 4.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B1512'/%3E%3Cpath d='M9 12h11a4 4 0 010 8h-1a5 5 0 01-10 0z' fill='none' stroke='%23E4B363' stroke-width='2'/%3E%3Cpath d='M20 14h1.5a2.5 2.5 0 010 5H20' fill='none' stroke='%23E4B363' stroke-width='2'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF7F2; --card:#FFFFFF; --sunk:#F2EAE0; --line:#E3D7C8;
+    --ink:#1B1512; --body:#4B403A; --mut:#847469;
+    --accent:#8A5A2B; --gold:#E4B363; --leaf:#4E6B4A;
+    --gap-bg:#FDF3E3; --gap-line:#D9A441; --gap-ink:#7A5410;
+    --dsp:'Fraunces',Georgia,'Times New Roman',serif;
+    --ui:'Karla',ui-sans-serif,system-ui,-apple-system,sans-serif;
+    --nav:64px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#161210; --card:#1F1917; --sunk:#251E1A; --line:#3A2F29;
+      --ink:#F5EFE8; --body:#CBBFB5; --mut:#9A8B80;
+      --accent:#D79B5C; --gold:#E4B363; --leaf:#8FB289;
+      --gap-bg:#2A2013; --gap-line:#8A6520; --gap-ink:#E8C179;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#161210; --card:#1F1917; --sunk:#251E1A; --line:#3A2F29;
+    --ink:#F5EFE8; --body:#CBBFB5; --mut:#9A8B80;
+    --accent:#D79B5C; --gold:#E4B363; --leaf:#8FB289;
+    --gap-bg:#2A2013; --gap-line:#8A6520; --gap-ink:#E8C179;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+  body{background:var(--bg);color:var(--body);font-family:var(--ui);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3{font-family:var(--dsp);color:var(--ink);line-height:1.12;letter-spacing:-.015em}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:940px;margin:0 auto;padding:0 22px}
+  .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--accent);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;text-decoration:none}
+  .skip:focus{left:0}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:var(--nav)}
+  .brand{font-family:var(--dsp);font-weight:700;font-size:19px;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .brand em{font-style:italic;color:var(--accent)}
+  .navright{display:flex;align-items:center;gap:26px}
+  .nl{display:flex;gap:26px}
+  .nl a{color:var(--body);font-size:15px;font-weight:500;text-decoration:none}
+  .nl a:hover{color:var(--accent)}
+  .call{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;padding:10px 18px;border-radius:100px;text-decoration:none;white-space:nowrap}
+  .call:hover{filter:brightness(1.08)}
+  .menu{display:none;position:relative}
+  .menu summary{list-style:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--ink);cursor:pointer}
+  .menu summary::-webkit-details-marker{display:none}
+  .menu-panel{position:absolute;top:calc(100% + 10px);right:0;min-width:196px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;display:flex;flex-direction:column;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+  .menu-panel a{padding:11px 14px;border-radius:9px;color:var(--ink);text-decoration:none;font-size:16px}
+  .menu-panel a:hover{background:var(--sunk)}
+  @media(max-width:720px){
+    .nl{display:none} .menu{display:block} .navright{gap:8px}
+    .call{padding:10px 14px}
+  }
+  @media(max-width:430px){
+    .call .callno{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+    .call{padding:12px}
+    .brand{font-size:17px}
+  }
+
+  /* hero */
+  .hero{padding:clamp(56px,10vw,104px) 0 clamp(36px,6vw,60px);text-align:center}
+  .kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);font-weight:600}
+  .hero h1{font-size:clamp(42px,9vw,84px);font-weight:600;margin:16px 0 0}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero p.lede{font-size:clamp(17px,2.4vw,20px);max-width:44ch;margin:20px auto 0;color:var(--body)}
+  .hours-pill{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--sunk);border:1px solid var(--line);border-radius:100px;padding:9px 18px;font-size:15px;font-weight:500;color:var(--ink)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--leaf);flex:none}
+
+  /* sections */
+  section{padding:clamp(40px,7vw,68px) 0}
+  section[id]{scroll-margin-top:calc(var(--nav) + 14px)}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px}
+  .sec-head h2{font-size:clamp(24px,3.6vw,32px);font-weight:600}
+  .sec-head .note{font-size:13px;color:var(--mut);white-space:nowrap;font-weight:500}
+
+  /* menu groups */
+  .group{margin-top:34px}
+  .group h3{font-size:20px;font-weight:600;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .tag{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:100px;background:var(--sunk);color:var(--mut);border:1px solid var(--line)}
+  .tag.matcha{background:color-mix(in srgb,var(--leaf) 16%,transparent);color:var(--leaf);border-color:color-mix(in srgb,var(--leaf) 40%,transparent)}
+  .group .blurb{color:var(--mut);font-size:15px;margin-top:6px}
+  ul.items{list-style:none;margin-top:16px;border-top:1px solid var(--line)}
+  ul.items li{display:flex;align-items:baseline;gap:14px;padding:13px 2px;border-bottom:1px solid var(--line)}
+  .iname{color:var(--ink);font-weight:500}
+  .idesc{display:block;color:var(--mut);font-size:14.5px;font-weight:400;margin-top:2px}
+  .lead{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:14px}
+  .iprice{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;white-space:nowrap}
+  .iprice small{color:var(--mut);font-weight:400;font-size:13px}
+
+  /* gaps */
+  .gap{background:var(--gap-bg);border:1px dashed var(--gap-line);color:var(--gap-ink);border-radius:10px;padding:12px 14px;margin-top:16px;font-size:14.5px}
+  .gap b{color:var(--gap-ink)}
+  .gap-inline{color:var(--gap-ink);font-size:13.5px;font-weight:600;font-style:italic}
+
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+  @media(max-width:720px){.visit{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .panel h3{font-size:18px;font-weight:600;margin-bottom:12px}
+  .rows{list-style:none}
+  .rows li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+  .rows li:last-child{border-bottom:0}
+  .rows span:last-child{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+  .bigcall{display:inline-flex;align-items:center;gap:9px;margin-top:16px;background:var(--ink);color:var(--bg);font-weight:600;padding:14px 24px;border-radius:100px;text-decoration:none}
+
+  footer{border-top:1px solid var(--line);margin-top:20px;padding:34px 0 46px;color:var(--mut);font-size:14.5px}
+  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  footer a{color:var(--body)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<!-- =====================================================================
+     THE KAHVI HOUSE — rebuilt 28 Aug 2026
+
+     VERIFIED from the launch audit and punch list: business name, phone
+     (509) 204-1745, hours Mon-Sat 9-4, 18 item names, and three price
+     points (Clouds $4.50 / Adult Lemonade $5.50-$6.50 / 16oz Red Bull
+     $6.75).
+
+     NOT YET SUPPLIED — every one is marked visibly on the page so it
+     cannot ship unnoticed:
+       - roughly 27 of the ~45 catalogue items
+       - most prices outside the three above
+       - 5-6 of the ~10 Red Bull infusion names (count itself unconfirmed:
+         the audit found 11, the owner says 10)
+       - Rio Azul description, the five seasonal drinks
+       - street address
+       - all photography
+     Search this file for "gap" to find every one.
+
+     DELIBERATE: Dulce de Leche is filed under Clouds and tagged MATCHA,
+     not under coffee. That miscategorisation is what kept generating
+     copy errors on the old site and the wall board.
+
+     The staff note "charge for fruit if they want or any other add ons!"
+     that appears as a public description on five Red Bull items in Square
+     is NOT reproduced here. Do not paste item descriptions in from Square
+     without reading them first.
+     ===================================================================== -->
+
+<a class="skip" href="#main">Skip to menu</a>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">The Kahvi <em>House</em></a>
+    <div class="navright">
+      <div class="nl">
+        <a href="#menu">Menu</a>
+        <a href="#visit">Visit</a>
+      </div>
+      <a class="call" href="tel:+15092041745" aria-label="Call the shop on (509) 204-1745"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.4 2.1L8.1 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg><span class="callno">(509) 204-1745</span></a>
+      <details class="menu" id="menu-d">
+        <summary aria-label="Menu"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <div class="menu-panel">
+          <a href="#menu">Menu</a>
+          <a href="#visit">Visit</a>
+          <a href="tel:+15092041745">Call us</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Coffee · Matcha · Red Bull Infusions</p>
+    <h1>The Kahvi <em>House</em></h1>
+    <p class="lede">Espresso, matcha and fruit-forward Red Bull infusions, made to order.</p>
+    <p class="hours-pill"><span class="dot" aria-hidden="true"></span> Monday to Saturday, 9am – 4pm</p>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Menu</h2>
+      <p class="note">12 · 16 · 24 oz · Bucket</p>
+    </div>
+
+    <div class="group">
+      <h3>Clouds <span class="tag">12 oz · $4.50</span></h3>
+      <p class="blurb">Our house blended drinks. Two coffee, one matcha.</p>
+      <ul class="items">
+        <li><span class="iname">Coconut Cloud<span class="idesc">Coffee</span></span><span class="lead"></span><span class="iprice">$4.50</span></li>
+        <li><span class="iname">Banana Créme Cloud<span class="idesc">Coffee</span></span><span class="lead"></span><span class="iprice">$4.50</span></li>
+        <li><span class="iname">Dulce de Leche <span class="tag matcha">Matcha</span><span class="idesc">Matcha — not a coffee drink</span></span><span class="lead"></span><span class="iprice">$4.50</span></li>
+      </ul>
+      <p class="gap"><b>Before this goes live:</b> 12 oz cups and lids need to be in stock, or mark the size unavailable in Square. This is the only size these three are offered in.</p>
+    </div>
+
+    <div class="group">
+      <h3>Red Bull Infusions <span class="tag">16 oz · $6.75</span></h3>
+      <p class="blurb">One price across the line.</p>
+      <ul class="items">
+        <li><span class="iname">Fresas Con Crema</span><span class="lead"></span><span class="iprice">$6.75</span></li>
+        <li><span class="iname">Land Of The Living</span><span class="lead"></span><span class="iprice">$6.75</span></li>
+        <li><span class="iname">Pica Fresa</span><span class="lead"></span><span class="iprice">$6.75</span></li>
+        <li><span class="iname">Tropical Mix</span><span class="lead"></span><span class="iprice">$6.75</span></li>
+        <li><span class="iname">Paradise</span><span class="lead"></span><span class="iprice">$6.75</span></li>
+        <li><span class="iname gap-inline">+ the remaining infusions — names needed</span><span class="lead"></span><span class="iprice">$6.75</span></li>
+      </ul>
+      <p class="gap"><b>Count unconfirmed.</b> The audit found eleven infusions; you've said ten. Settle this before anything is printed or laminated. Canned Red Bull is a separate item, not one of these.</p>
+    </div>
+
+    <div class="group">
+      <h3>Lemonade</h3>
+      <ul class="items">
+        <li><span class="iname">Adult Lemonade</span><span class="lead"></span><span class="iprice">$5.50 <small>16 oz</small> · $6.50 <small>24 oz</small></span></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Tea</h3>
+      <ul class="items">
+        <li><span class="iname">Honey Dew Tea</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h3>Also on the counter</h3>
+      <p class="blurb">Confirmed items still needing prices — six of these are also missing from Square.</p>
+      <ul class="items">
+        <li><span class="iname">Río Azul<span class="idesc">Drink of the month</span></span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+        <li><span class="iname">Agua Vivá</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+        <li><span class="iname">Con Cariño Fresa</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+        <li><span class="iname">Pistachio Dream</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+        <li><span class="iname">Spicy Avocado</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+        <li><span class="iname">Coconut Water</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+        <li><span class="iname">Canned Red Bull</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+        <li><span class="iname">Water Bottle</span><span class="lead"></span><span class="iprice gap-inline">price needed</span></li>
+      </ul>
+      <p class="gap"><b>This page carries 18 of roughly 45 items.</b> The five seasonal drinks aren't here, and neither is most of the espresso list. Send me the counter menu or a Square export and I'll complete it — the layout is built for it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head"><h2>Visit</h2></div>
+    <div class="visit">
+      <div class="panel">
+        <h3>Hours</h3>
+        <ul class="rows">
+          <li><span>Monday – Saturday</span><span>9am – 4pm</span></li>
+          <li><span>Sunday</span><span>Closed</span></li>
+        </ul>
+        <p class="gap">The wall board still promises “Sunday 10–3, coming soon.” Until Sunday hours are real, the site says closed.</p>
+      </div>
+      <div class="panel">
+        <h3>Find us</h3>
+        <ul class="rows">
+          <li><span>Phone</span><span><a href="tel:+15092041745">(509) 204-1745</a></span></li>
+          <li><span>Address</span><span class="gap-inline">needed</span></li>
+        </ul>
+        <a class="bigcall" href="tel:+15092041745">Call the shop</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 The Kahvi House · <a href="tel:+15092041745">(509) 204-1745</a></div>
+    <div>Mon–Sat 9–4</div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"The Kahvi House",
+  "url":"https://thekahvihouse.com/",
+  "telephone":"+1-509-204-1745",
+  "servesCuisine":"Coffee",
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens":"09:00","closes":"16:00"
+  }]
+}
+</script>
+
+<script>
+// <details> handles open/close natively; this only adds what it lacks.
+(function(){
+  var d=document.getElementById('menu-d'); if(!d) return;
+  function close(){ d.removeAttribute('open'); }
+  d.addEventListener('click',function(e){ if(e.target.closest('.menu-panel a')) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&d.hasAttribute('open')){close();d.querySelector('summary').focus();} });
+  document.addEventListener('click',function(e){ if(!d.contains(e.target)) close(); });
+})();
+</script>
+</body>
+</html>
