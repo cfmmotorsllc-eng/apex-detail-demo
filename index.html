@@ -93,16 +93,10 @@
   .hero .bg img{opacity:.55}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,11,.92) 0%,rgba(10,10,11,.55) 55%,rgba(10,10,11,.25) 100%)}
   .hero .wrap{position:relative;z-index:2}
-  .hmark{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:14px;font-weight:500;margin-bottom:26px}
-  .hmark .st{color:var(--gold);letter-spacing:2px}
   .hero h1{font-size:clamp(44px,8vw,86px);font-weight:600;max-width:14ch}
   .hero h1 em{font-style:normal;color:var(--accent)}
   .hero p{color:#c7c7cf;font-size:20px;max-width:500px;margin:26px 0 36px}
   .row{display:flex;gap:14px;flex-wrap:wrap}
-  .hstats{display:flex;gap:40px;margin-top:64px;flex-wrap:wrap}
-  .hstats div b{font-family:var(--dsp);font-size:30px;font-weight:600;display:block}
-  .hstats div span{color:var(--mut);font-size:13.5px}
-  @media(max-width:700px){.hstats{gap:26px 34px;margin-top:44px}}
   /* services */
   .svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
   @media(max-width:900px){.svcs{grid-template-columns:1fr}}
@@ -135,16 +129,6 @@
   .feat-row h3{font-family:var(--dsp);font-size:18px;font-weight:600;margin-bottom:2px;letter-spacing:0}
   .feat-row p{color:var(--mut);font-size:15px}
   .feat-block{margin-bottom:24px}
-  /* reviews */
-  .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
-  @media(max-width:900px){.revs{grid-template-columns:1fr}}
-  .rev{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px}
-  .rev .st{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:14px}
-  .rev p{font-size:15.5px;color:#d5d5db}
-  .rev .who{display:flex;align-items:center;gap:12px;margin-top:20px}
-  .rev .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#2b5f8f);display:flex;align-items:center;justify-content:center;font-family:var(--dsp);font-weight:600;color:#03101f}
-  .rev .who b{font-family:var(--dsp);font-size:15px;font-weight:600;display:block}
-  .rev .who span{color:var(--mut);font-size:13px}
   /* cta */
   .cta{position:relative;border-radius:28px;overflow:hidden;background:#000;padding:80px 30px;text-align:center;margin:0 24px}
   .cta .bg{position:absolute;inset:0}.cta .bg img{opacity:.4}
@@ -164,6 +148,21 @@
 </style>
 </head>
 <body>
+<!-- ============================================================
+     PLACEHOLDERS — every value below is invented. Replace before
+     this page goes live, and delete the .demo banner when you do.
+
+       Business name   "Apex Auto Detailing" / "APEX / DETAIL"
+       Phone           (509) 555-1234  — a reserved fake number
+       Email           hello@apexdetail.com
+       Domain          apexdetail.com  (canonical, og:url, JSON-LD)
+       Service area    "your city & surrounding areas"
+       Prices          $99 / $229 / $699+
+       Photos          8 hotlinked Unsplash stock images
+
+     Fabricated review and statistic blocks were removed rather than
+     rewritten. Add real ones when you have them.
+     ============================================================ -->
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="demo">DEMO — a sample custom site. Yours would use your name, photos &amp; reviews.</div>
@@ -176,7 +175,6 @@
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
       </div>
       <a href="#book" class="btn accent">Book a Detail</a>
       <details class="menu" id="menu">
@@ -185,8 +183,7 @@
           <a href="#services">Services</a>
           <a href="#work">Work</a>
           <a href="#about">About</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#book" class="btn accent">Book a Detail</a>
+            <a href="#book" class="btn accent">Book a Detail</a>
         </div>
       </details>
     </div>
@@ -197,18 +194,11 @@
 <header class="hero">
   <div class="bg"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80" alt="" fetchpriority="high" decoding="async"></div>
   <div class="wrap">
-    <p class="hmark"><span class="st" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</span> Rated 5.0 by 400+ local drivers</p>
     <h1>The detail your car <em>deserves.</em></h1>
     <p>Premium mobile detailing, paint correction &amp; ceramic coating — done right in your driveway.</p>
     <div class="row">
       <a href="#book" class="btn">Get a Free Quote</a>
       <a href="#services" class="btn line">Services &amp; Pricing</a>
-    </div>
-    <div class="hstats">
-      <div><b>2,400+</b><span>Cars detailed</span></div>
-      <div><b>5.0★</b><span>Google rating</span></div>
-      <div><b>100%</b><span>We come to you</span></div>
-      <div><b>5yr</b><span>Ceramic warranty</span></div>
     </div>
   </div>
 </header>
@@ -294,15 +284,6 @@
     </div>
   </div>
   <div class="photo"><img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1000&q=80" alt="Detailer hand-polishing a car panel with a machine polisher" loading="lazy" decoding="async"></div>
-</div></section>
-
-<section id="reviews" aria-labelledby="reviews-h"><div class="wrap">
-  <div class="center"><p class="eyebrow">Reviews</p><h2 class="h2" id="reviews-h">Locals don't go anywhere else</h2></div>
-  <div class="revs">
-    <figure class="rev"><p class="st" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</p><blockquote><p>"Showed up on time and my truck looks brand new. The ceramic coating is unreal — water just beads and rolls off."</p></blockquote><figcaption class="who"><span class="av" aria-hidden="true">MT</span><span><b>Marcus T.</b><span>Ceramic Coating</span></span></figcaption></figure>
-    <figure class="rev"><p class="st" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</p><blockquote><p>"Booked in a minute and they came to my office. Interior looks better than the day I drove it off the lot."</p></blockquote><figcaption class="who"><span class="av" aria-hidden="true">JR</span><span><b>Jenna R.</b><span>Full Detail</span></span></figcaption></figure>
-    <figure class="rev"><p class="st" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</p><blockquote><p>"Best in town, hands down. Professional, on time, and the results are on another level. Already booked my next one."</p></blockquote><figcaption class="who"><span class="av" aria-hidden="true">DK</span><span><b>Dave K.</b><span>Paint Correction</span></span></figcaption></figure>
-  </div>
 </div></section>
 
 <section id="book" style="padding-bottom:0" aria-labelledby="book-h"><div class="cta">
