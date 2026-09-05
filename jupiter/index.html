@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jupiter Construction LLC — Remodels, Additions, Drywall &amp; Painting</title>
+<meta name="description" content="Jupiter Construction LLC builds kitchen and bath remodels, home additions, drywall repair and painting. Free written estimates, licensed and insured, one crew from start to finish.">
+<link rel="canonical" href="https://www.jupiterconstructionllc.com/">
+<meta name="theme-color" content="#14161a">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jupiter Construction LLC">
+<meta property="og:title" content="Jupiter Construction LLC — Remodels, Additions, Drywall &amp; Painting">
+<meta property="og:description" content="Superior craftsmanship, personalized service, and one crew from start to finish. Free written estimates.">
+<meta property="og:url" content="https://www.jupiterconstructionllc.com/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:image:alt" content="A finished kitchen remodel with custom cabinetry and stone countertops">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jupiter Construction LLC — Remodels, Additions, Drywall &amp; Painting">
+<meta name="twitter:description" content="Superior craftsmanship, personalized service, and one crew from start to finish. Free written estimates.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=80">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314161a'/%3E%3Cg fill='none' stroke='%23e08a3c' stroke-width='2.1'%3E%3Ccircle cx='16' cy='16' r='7'/%3E%3Cellipse cx='16' cy='16' rx='13' ry='4.1' transform='rotate(-22 16 16)'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f5f2;        /* warm concrete */
+    --panel:#fffefc;
+    --card:#ffffff;
+    --line:#e4ded5;
+    --ink:#14161a;
+    --mut:#66696f;
+    --accent:#b8480d;    /* burnt orange — AA on white and on --ink */
+    --accent-lt:#e08a3c; /* same hue, for dark backgrounds */
+    --dark:#14161a;
+    --dsp:Archivo,ui-sans-serif,system-ui,sans-serif;
+    --ui:Inter,ui-sans-serif,system-ui,sans-serif;
+    --topbar:76px;       /* nav height; the preview strip scrolls away above it */
+    --callbar:0px;       /* becomes 68px on phones, where the sticky call bar shows */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+  body{font-family:var(--ui);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:var(--callbar)}
+  h1,h2,h3,.dsp{font-family:var(--dsp);letter-spacing:-.022em;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  svg{flex-shrink:0}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .mut{color:var(--mut)}
+  .center{text-align:center}
+  .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--accent);color:#fff;font-family:var(--dsp);font-weight:600;padding:12px 20px;border-radius:0 0 10px 0}
+  .skip:focus{left:0}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--ink);color:#fff;font-weight:600;
+       font-family:var(--dsp);padding:15px 28px;border-radius:10px;transition:.22s;font-size:15.5px;border:1.5px solid transparent;cursor:pointer;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);background:#000}
+  .btn.accent{background:var(--accent);color:#fff}
+  .btn.accent:hover{background:#9c3c0a}
+  .btn.line{background:transparent;color:var(--ink);border-color:#c9c2b7}
+  .btn.line:hover{background:transparent;border-color:var(--ink)}
+  .btn.ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35);backdrop-filter:blur(6px)}
+  .btn.ghost:hover{background:rgba(255,255,255,.16)}
+
+  .eyebrow{color:var(--accent);font-family:var(--dsp);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+  section{padding:96px 0}
+  section[id]{scroll-margin-top:calc(var(--topbar) + 12px)}
+  @media(max-width:700px){section{padding:64px 0}}
+  .h2{font-size:clamp(30px,5vw,47px);font-weight:700;margin:14px 0}
+  .sub{color:var(--mut);max-width:600px;font-size:17.5px}
+  .center .sub{margin-left:auto;margin-right:auto}
+  .row{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ---- top bar (preview strip + nav travel together) ---- */
+  .preview{background:var(--ink);color:#f0ece6;text-align:center;font-size:12.5px;font-weight:500;padding:9px 16px;letter-spacing:.01em}
+  .preview b{color:var(--accent-lt);font-weight:600}
+  nav{position:sticky;top:0;z-index:60;background:rgba(247,245,242,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--dsp);font-weight:700;font-size:19px;letter-spacing:-.01em;white-space:nowrap;line-height:1.15}
+  .brand svg{width:32px;height:32px;color:var(--accent)}
+  .brand small{display:block;font-family:var(--ui);font-weight:500;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+  .navright{display:flex;align-items:center;gap:30px}
+  .nl{display:flex;gap:28px;align-items:center}
+  .nl a{color:var(--mut);font-size:15px;font-weight:500;transition:.2s}
+  .nl a:hover{color:var(--ink)}
+  /* mobile menu: a <details> disclosure, so it works with JS disabled */
+  .menu{display:none;position:relative}
+  .menu summary{list-style:none;cursor:pointer;width:46px;height:46px;border:1.5px solid #cfc8bd;border-radius:11px;
+                display:flex;align-items:center;justify-content:center;color:var(--ink);background:var(--card)}
+  .menu summary::-webkit-details-marker{display:none}
+  .menu summary svg{width:20px;height:20px}
+  .menu[open] summary{border-color:var(--accent);color:var(--accent)}
+  .menu-panel{position:absolute;top:calc(100% + 10px);right:0;min-width:230px;background:var(--panel);
+              border:1px solid var(--line);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:2px;
+              box-shadow:0 20px 44px rgba(20,22,26,.16)}
+  .menu-panel a:not(.btn){padding:11px 14px;border-radius:9px;font-size:15.5px;color:var(--ink)}
+  .menu-panel a:not(.btn):hover{background:#f1ede7}
+  .menu-panel .btn{margin-top:8px}
+  @media(max-width:960px){
+    .navright{gap:10px}
+    .nl{display:none}
+    .menu{display:block}
+    .navright>.btn{padding:12px 18px;font-size:14.5px}
+  }
+  @media(max-width:460px){.brand span.n{font-size:16px}.navright>.btn{display:none}}
+
+  /* ---- hero ---- */
+  .hero{position:relative;display:flex;align-items:flex-end;background:var(--dark);
+        min-height:calc(100vh - var(--topbar));min-height:calc(100svh - var(--topbar));padding:120px 0 56px}
+  .hero .bg{position:absolute;inset:0}
+  .hero .bg img{opacity:.5}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,22,26,.55) 0%,rgba(20,22,26,.35) 35%,rgba(20,22,26,.94) 100%)}
+  .hero .wrap{position:relative;z-index:2;color:#fff}
+  .hero h1{font-size:clamp(38px,6.6vw,74px);font-weight:700;max-width:17ch}
+  .hero h1 em{font-style:normal;color:var(--accent-lt)}
+  .hero p{color:#d9d5cf;font-size:clamp(17px,2.2vw,20px);max-width:560px;margin:22px 0 34px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+  .chip{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;color:#efece7;
+        background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:100px}
+  .chip svg{width:15px;height:15px;color:var(--accent-lt)}
+
+  @media(max-width:700px){
+    .hero{align-items:center;padding:64px 0 44px}
+    .hero h1{font-size:clamp(33px,8.8vw,44px);max-width:none}
+    .hero p{font-size:17px;margin:18px 0 26px}
+    .chips{gap:8px;margin-bottom:24px}
+    .chip{font-size:12.5px;padding:6px 12px}
+    .hero .row{width:100%}
+    .hero .row .btn{flex:1 1 160px}
+  }
+
+  /* ---- services ---- */
+  .svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+  @media(max-width:940px){.svcs{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.svcs{grid-template-columns:1fr}}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 28px;transition:.22s}
+  .svc:hover{transform:translateY(-4px);border-color:#cfc5b6;box-shadow:0 14px 34px rgba(20,22,26,.08)}
+  .svc .ic{width:44px;height:44px;border-radius:11px;background:#fbf1e9;border:1px solid #f0dcc9;color:var(--accent);
+           display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .svc .ic svg{width:22px;height:22px}
+  .svc h3{font-size:20.5px;font-weight:600}
+  .svc p{color:var(--mut);font-size:15.5px;margin-top:9px}
+  .svc ul{list-style:none;margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+  .svc li{color:#4b4e54;font-size:14.5px;padding:5px 0 5px 22px;position:relative}
+  .svc li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:2px;background:var(--accent)}
+
+  /* ---- before / after ---- */
+  .ba{margin-top:44px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 14px 34px rgba(20,22,26,.06)}
+  .ba-stage{--p:50%;position:relative;border-radius:13px;overflow:hidden;aspect-ratio:16/9;background:#e9e4dc}
+  @media(max-width:620px){.ba-stage{aspect-ratio:4/3}}
+  .ba-stage .after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--p))}
+  .ba-stage .tag{position:absolute;top:14px;z-index:3;font-family:var(--dsp);font-weight:600;font-size:11.5px;letter-spacing:.14em;
+                 text-transform:uppercase;color:#fff;background:rgba(20,22,26,.72);padding:6px 12px;border-radius:100px}
+  .ba-stage .tag.b{left:14px}
+  .ba-stage .tag.a{right:14px;background:var(--accent)}
+  .ba-stage .line{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:#fff;z-index:2;box-shadow:0 0 0 1px rgba(20,22,26,.25);pointer-events:none}
+  .ba-stage .line::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;
+                         background:#fff;box-shadow:0 3px 12px rgba(20,22,26,.35)}
+  .ba-stage .grip{position:absolute;top:50%;left:var(--p);transform:translate(-50%,-50%);z-index:3;pointer-events:none;color:var(--ink)}
+  .ba-stage .grip svg{width:20px;height:20px}
+  .ba input[type=range]{-webkit-appearance:none;appearance:none;width:100%;margin:16px 0 4px;background:transparent;cursor:ew-resize}
+  .ba input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:100px;background:#e4ded5}
+  .ba input[type=range]::-moz-range-track{height:6px;border-radius:100px;background:#e4ded5}
+  .ba input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 2px 8px rgba(20,22,26,.3);margin-top:-9px}
+  .ba input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 2px 8px rgba(20,22,26,.3)}
+  .ba .cap{display:flex;justify-content:space-between;gap:16px;font-size:13.5px;color:var(--mut);padding:0 2px}
+
+  /* ---- process ---- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;counter-reset:s;list-style:none}
+  @media(max-width:940px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 24px;position:relative}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--dsp);font-weight:700;font-size:34px;color:#e8ddd0;line-height:1;display:block;margin-bottom:14px}
+  .step h3{font-size:19px;font-weight:600}
+  .step p{color:var(--mut);font-size:15px;margin-top:8px}
+
+  /* ---- gallery ---- */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px;margin-top:44px;list-style:none}
+  @media(max-width:860px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:165px}}
+  .cell{border-radius:14px;overflow:hidden;position:relative;background:#e9e4dc}
+  .cell .lbl{position:absolute;left:15px;right:15px;bottom:13px;z-index:2;font-family:var(--dsp);font-weight:600;font-size:13.5px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7)}
+  .cell::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 52%,rgba(0,0,0,.6))}
+  .cell img{transition:.5s}.cell:hover img{transform:scale(1.05)}
+  .big{grid-column:span 2;grid-row:span 2}
+  @media(max-width:860px){.big{grid-column:span 2;grid-row:span 1}}
+
+  /* ---- split / why ---- */
+  .split{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+  @media(max-width:900px){.split{grid-template-columns:1fr;gap:36px}}
+  .split .photo{border-radius:18px;overflow:hidden;aspect-ratio:5/4;background:#e9e4dc}
+  .feat-row{display:flex;gap:16px;margin-top:26px}
+  .feat-row .fi{width:44px;height:44px;flex-shrink:0;border-radius:11px;background:#fbf1e9;border:1px solid #f0dcc9;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+  .feat-row h3{font-family:var(--dsp);font-size:18px;font-weight:600;margin-bottom:2px;letter-spacing:-.01em}
+  .feat-row p{color:var(--mut);font-size:15px}
+
+  /* ---- area ---- */
+  .area{background:var(--dark);color:#fff}
+  .area .h2{color:#fff}
+  .area .sub{color:#b8b5b0}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;list-style:none}
+  .towns li{font-size:14.5px;color:#e6e2dc;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:100px}
+
+  /* ---- faq ---- */
+  .faq{max-width:820px;margin:44px auto 0}
+  .q{border-bottom:1px solid var(--line)}
+  .q summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
+             padding:22px 2px;font-family:var(--dsp);font-weight:600;font-size:18px}
+  .q summary::-webkit-details-marker{display:none}
+  .q summary svg{width:20px;height:20px;flex-shrink:0;margin-top:3px;color:var(--accent);transition:.25s}
+  .q[open] summary svg{transform:rotate(45deg)}
+  .q .a{color:var(--mut);font-size:16px;padding:0 40px 24px 2px}
+
+  /* ---- quote form ---- */
+  .quote{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;
+         background:var(--card);border:1px solid var(--line);border-radius:22px;padding:44px;box-shadow:0 18px 44px rgba(20,22,26,.07)}
+  .quote>*{min-width:0}
+  @media(max-width:900px){.quote{grid-template-columns:1fr;gap:32px;padding:30px 20px}}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13.5px;font-weight:600;font-family:var(--dsp);margin-bottom:6px}
+  .field .req{color:var(--accent)}
+  .field input,.field select,.field textarea{width:100%;font-family:var(--ui);font-size:15.5px;color:var(--ink);
+    background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;transition:.18s}
+  .field textarea{min-height:112px;resize:vertical}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.two{grid-template-columns:1fr}}
+  .form-note{font-size:13.5px;color:var(--mut);margin-top:12px}
+  .contact-card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .contact-card h3{font-size:17px;font-weight:600}
+  .cline{display:flex;gap:12px;align-items:center;margin-top:16px;font-size:15.5px;min-width:0}
+  /* the email address is one long unbreakable token — let it wrap rather than
+     widen the card past the viewport on a phone */
+  .cline>span:last-child{min-width:0;overflow-wrap:anywhere}
+  .cline .fi{width:38px;height:38px;flex-shrink:0;border-radius:10px;background:#fbf1e9;border:1px solid #f0dcc9;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+  .cline .fi svg{width:18px;height:18px}
+  .cline b{display:block;font-family:var(--dsp);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-weight:600}
+
+  /* ---- sticky mobile call bar ---- */
+  .callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(255,255,255,.94);
+           backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);
+           padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .callbar .btn{flex:1;padding:13px 10px;font-size:14.5px}
+  @media(max-width:820px){
+    :root{--callbar:68px}
+    .callbar{display:flex}
+  }
+
+  /* ---- footer ---- */
+  footer{background:var(--dark);color:#a8a5a0;font-size:14.5px;padding:56px 0 40px}
+  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  @media(max-width:760px){footer .cols{grid-template-columns:1fr;gap:28px}}
+  footer .brand{color:#fff}
+  footer .brand svg{color:var(--accent-lt)}
+  footer .brand small{color:#8d8a85}
+  footer h4{font-family:var(--dsp);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px;font-weight:600}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:8px;overflow-wrap:anywhere}
+  footer a:hover{color:#fff}
+  .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:24px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13.5px}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    .btn:hover,.svc:hover{transform:none}
+    .cell:hover img{transform:none}
+  }
+</style>
+</head>
+<body>
+<!-- ==========================================================================
+     PLACEHOLDERS — replace these before this page goes live, then delete the
+     .preview strip at the top of <body> and this comment.
+
+       Phone          (555) 012-3456  — appears in nav, hero, call bar, footer,
+                                        JSON-LD, and the tel: links. Search the
+                                        file for 5550123456 and 555-012-3456.
+       Service area   the town list in #area is a placeholder — swap in the
+                      real towns/counties; it is the single biggest local-SEO
+                      lever on the page.
+       Address        JSON-LD "address" is commented out. Fill it in if the
+                      business has a public address — it helps Google connect
+                      the site to the Google Business Profile.
+       License #      the "Licensed & insured" chip states no number. Add the
+                      real license number there and in JSON-LD if you have one.
+       Photos         12 hotlinked Unsplash stock images. Replace every one
+                      with real job photos — for a contractor this is the
+                      single highest-impact change on the whole page.
+       Before/after   the slider uses two unrelated stock photos. Swap in a
+                      real matched pair shot from the same spot.
+
+     Kept real: the business name, the service list, the positioning copy, and
+     jupiterconstructionllc@gmail.com — all from the existing site.
+
+     Deliberately NOT included: testimonials, star ratings, "years in
+     business", project counts, or award badges. Invented social proof is
+     worse than none. Add these once there are real ones to quote.
+
+     The quote form posts nothing — it opens the visitor's mail client with the
+     answers pre-filled (works with no backend and no monthly fee). To collect
+     submissions server-side instead, set the <form> action to a Formspree /
+     Basin / Netlify Forms endpoint, method="post", and delete the JS handler
+     at the bottom of this file.
+     ========================================================================== -->
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="preview">PREVIEW — a proposed redesign. <b>Phone number, service area &amp; photos are placeholders.</b></div>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Jupiter Construction LLC — home">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.1" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7.5"/><ellipse cx="16" cy="16" rx="14.2" ry="4.4" transform="rotate(-22 16 16)"/></svg>
+      <span><span class="n">Jupiter Construction</span><small>Remodels &amp; Additions</small></span>
+    </a>
+    <div class="navright">
+      <div class="nl">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#quote" class="btn accent">Get a Free Estimate</a>
+      <details class="menu" id="menu">
+        <summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <div class="menu-panel">
+          <a href="#services">Services</a>
+          <a href="#work">Our Work</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#area">Service Area</a>
+          <a href="#faq">FAQ</a>
+          <a href="#quote" class="btn accent">Get a Free Estimate</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<header class="hero" id="top">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" alt="" fetchpriority="high" decoding="async"></div>
+  <div class="wrap">
+    <h1>Remodels and additions, <em>done right the first time.</em></h1>
+    <p>Kitchens, baths, additions, drywall and paint — one crew, one point of contact, and a written scope before anyone swings a hammer.</p>
+    <ul class="chips">
+      <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.4 8.3-8 9-4.6-.7-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Licensed &amp; insured</li>
+      <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M14 2H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V7z"/><path d="M14 2v5h5M9 13h6M9 17h4"/></svg>Free written estimates</li>
+      <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M3 21h18M6 21V8l6-4 6 4v13"/><path d="M10 21v-5h4v5"/></svg>Remodels · Additions · Drywall · Paint</li>
+    </ul>
+    <div class="row">
+      <a href="#quote" class="btn accent">Get a Free Estimate</a>
+      <a href="tel:+15550123456" class="btn ghost">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+        Call (555) 012-3456
+      </a>
+    </div>
+  </div>
+</header>
+
+<section id="services" aria-labelledby="services-h"><div class="wrap">
+  <p class="eyebrow">What we build</p>
+  <h2 class="h2" id="services-h">One shop for the whole job</h2>
+  <p class="sub">From a single wall repair to a full addition — no subcontractor roulette, no gaps between trades, no finger-pointing when something needs fixing.</p>
+
+  <div class="svcs">
+    <article class="svc">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 9h18M3 9V5a2 2 0 012-2h14a2 2 0 012 2v4M3 9v10a2 2 0 002 2h14a2 2 0 002-2V9"/><path d="M8 13h3M8 17h3M15 13h1"/></svg></div>
+      <h3>Kitchen &amp; Bath Remodels</h3>
+      <p>The two rooms that decide how a house feels — and what it appraises for.</p>
+      <ul>
+        <li>Cabinetry, countertops &amp; backsplash</li>
+        <li>Tile, shower pans &amp; waterproofing</li>
+        <li>Fixture and appliance installation</li>
+        <li>Layout changes &amp; wall removal</li>
+      </ul>
+    </article>
+
+    <article class="svc">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 21h18M5 21V11l5-4v14"/><path d="M10 11l6-4v14M14 21v-4h2v4"/></svg></div>
+      <h3>Additions</h3>
+      <p>More square footage that reads as original to the house, not bolted on.</p>
+      <ul>
+        <li>Room, primary suite &amp; in-law additions</li>
+        <li>Garage &amp; porch conversions</li>
+        <li>Framing, roof tie-in &amp; siding match</li>
+        <li>Permit drawings &amp; inspections</li>
+      </ul>
+    </article>
+
+    <article class="svc">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 4h18v16H3z"/><path d="M3 10h18M9 4v6M15 10v10"/></svg></div>
+      <h3>Drywall &amp; Repair</h3>
+      <p>Hang, tape, texture and blend — patches that disappear instead of announcing themselves.</p>
+      <ul>
+        <li>Water, crack &amp; settling damage</li>
+        <li>Texture matching (knockdown, orange peel)</li>
+        <li>Ceiling repair &amp; popcorn removal</li>
+        <li>Full-room hang &amp; finish</li>
+      </ul>
+    </article>
+
+    <article class="svc">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M4 3h11v6H4z"/><path d="M15 6h3a2 2 0 012 2v3a2 2 0 01-2 2h-6v3"/><path d="M10 16h4v5h-4z"/></svg></div>
+      <h3>Interior &amp; Exterior Painting</h3>
+      <p>Proper prep is most of the job. That is where a paint job either lasts or peels.</p>
+      <ul>
+        <li>Full prep: sand, patch, caulk, prime</li>
+        <li>Interior walls, trim, doors &amp; ceilings</li>
+        <li>Exterior siding, soffit &amp; fascia</li>
+        <li>Cabinet refinishing</li>
+      </ul>
+    </article>
+
+    <article class="svc">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M14.7 6.3a4 4 0 01-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 015.4-5.4z"/><path d="M17 3l4 4-2 2-4-4z"/></svg></div>
+      <h3>Installations &amp; Finish Work</h3>
+      <p>The details people actually touch every day — set straight, level and tight.</p>
+      <ul>
+        <li>Doors, windows &amp; hardware</li>
+        <li>Trim, baseboard &amp; crown molding</li>
+        <li>Flooring: LVP, tile &amp; hardwood</li>
+        <li>Built-ins &amp; shelving</li>
+      </ul>
+    </article>
+
+    <article class="svc">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 21h18M4 21V7l8-4 8 4v14"/><path d="M9 21v-6h6v6M9 11h2M13 11h2"/></svg></div>
+      <h3>Whole-Home Renovations</h3>
+      <p>Gut-to-finish projects run on one schedule, with one crew accountable for all of it.</p>
+      <ul>
+        <li>Full interior remodels</li>
+        <li>Rental turns &amp; flip renovations</li>
+        <li>Phased work so you can stay in the home</li>
+        <li>Coordination of every trade</li>
+      </ul>
+    </article>
+  </div>
+</div></section>
+
+<section id="work" style="background:#f1ede7;border-block:1px solid var(--line)" aria-labelledby="work-h"><div class="wrap">
+  <p class="eyebrow">Our work</p>
+  <h2 class="h2" id="work-h">Drag to see the difference</h2>
+  <p class="sub">Same room, same angle — before demo and after final walkthrough.</p>
+
+  <div class="ba">
+    <div class="ba-stage" id="ba">
+      <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1400&q=80" alt="Kitchen before the remodel: dated cabinets, worn laminate countertops and old flooring" loading="lazy" decoding="async">
+      <div class="after"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1400&q=80" alt="The same kitchen after the remodel: new cabinetry, stone countertops, tile backsplash and updated lighting" loading="lazy" decoding="async"></div>
+      <span class="tag b">Before</span>
+      <span class="tag a">After</span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="grip" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M9 6l-4 6 4 6M15 6l4 6-4 6"/></svg></span>
+    </div>
+    <input id="ba-range" type="range" min="0" max="100" value="50" step="1"
+           aria-label="Reveal the after photo — drag left for before, right for after">
+    <div class="cap"><span>Kitchen remodel · full gut &amp; refinish</span><span>Drag the slider or use ← →</span></div>
+  </div>
+
+  <ul class="gal">
+    <li class="cell big"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Open-concept living room after a whole-home renovation" loading="lazy" decoding="async"><span class="lbl">Whole-home renovation</span></li>
+    <li class="cell"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80" alt="Finished bathroom remodel with tiled walk-in shower" loading="lazy" decoding="async"><span class="lbl">Bath remodel</span></li>
+    <li class="cell"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="New framing going up on a room addition" loading="lazy" decoding="async"><span class="lbl">Room addition · framing</span></li>
+    <li class="cell"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Freshly taped and finished drywall in a bedroom" loading="lazy" decoding="async"><span class="lbl">Drywall &amp; finish</span></li>
+    <li class="cell"><img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80" alt="Painter cutting in a clean line along interior trim" loading="lazy" decoding="async"><span class="lbl">Interior painting</span></li>
+    <li class="cell"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="New kitchen cabinetry and island installed" loading="lazy" decoding="async"><span class="lbl">Cabinet installation</span></li>
+    <li class="cell"><img src="https://images.unsplash.com/photo-1594940578055-3a15c0e0e4a1?auto=format&fit=crop&w=800&q=80" alt="Exterior of a home with newly painted siding and trim" loading="lazy" decoding="async"><span class="lbl">Exterior repaint</span></li>
+  </ul>
+</div></section>
+
+<section id="process" aria-labelledby="process-h"><div class="wrap">
+  <p class="eyebrow">How it works</p>
+  <h2 class="h2" id="process-h">You always know what happens next</h2>
+  <p class="sub">Most remodel horror stories are communication problems, not carpentry problems. Here is exactly how a job runs.</p>
+  <ol class="steps">
+    <li class="step">
+      <h3>Walkthrough</h3>
+      <p>We come out, look at the actual space, and talk through what you want and what the house will allow. No charge, no pressure.</p>
+    </li>
+    <li class="step">
+      <h3>Written scope &amp; price</h3>
+      <p>You get a line-item estimate — materials, labor, allowances and exclusions in writing — so there is nothing to argue about later.</p>
+    </li>
+    <li class="step">
+      <h3>Build</h3>
+      <p>Surfaces protected, a start and finish date, and one person you can text. The site gets cleaned at the end of every day.</p>
+    </li>
+    <li class="step">
+      <h3>Punch list &amp; walkthrough</h3>
+      <p>We walk it together, you list anything that is not right, and we fix it before the final invoice — not after.</p>
+    </li>
+  </ol>
+</div></section>
+
+<section id="about" style="background:#f1ede7;border-block:1px solid var(--line)" aria-labelledby="about-h"><div class="wrap split">
+  <div>
+    <p class="eyebrow">Why Jupiter</p>
+    <h2 class="h2" id="about-h">Craftsmanship, and someone who picks up the phone</h2>
+    <p class="sub">Our team is committed to superior craftsmanship, personalized service and innovative solutions — a one-stop shop that delivers quality, efficiency and reliability from start to finish.</p>
+
+    <div class="feat-row">
+      <div class="fi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.9"/></svg></div>
+      <div><h3>One crew, start to finish</h3><p>The people who start your job are the people who finish it. No handoffs to a subcontractor you have never met.</p></div>
+    </div>
+    <div class="feat-row">
+      <div class="fi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M14 2H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V7z"/><path d="M14 2v5h5M9 13h6M9 17h4"/></svg></div>
+      <div><h3>Priced in writing, before we start</h3><p>A line-item scope with allowances and exclusions spelled out. Change orders get signed before the work happens, never billed as a surprise.</p></div>
+    </div>
+    <div class="feat-row">
+      <div class="fi"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M3 21h18M6 21v-9l6-5 6 5v9"/><path d="M9 21v-5h6v5"/></svg></div>
+      <div><h3>We treat it like we live there</h3><p>Floors covered, dust contained, tools put away and the site swept before we leave each day. You are living in a jobsite — we do not forget that.</p></div>
+    </div>
+  </div>
+  <div class="photo"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80" alt="A carpenter measuring and marking trim on a finished remodel" loading="lazy" decoding="async"></div>
+</div></section>
+
+<section id="area" class="area" aria-labelledby="area-h"><div class="wrap">
+  <p class="eyebrow" style="color:var(--accent-lt)">Service area</p>
+  <h2 class="h2" id="area-h">Where we work</h2>
+  <p class="sub">If you are just outside this list, still reach out — depending on the size of the job we will often travel.</p>
+  <ul class="towns">
+    <li>Your city</li><li>Neighboring town</li><li>Neighboring town</li>
+    <li>Neighboring town</li><li>Neighboring town</li><li>Your county</li>
+    <li>Surrounding areas</li>
+  </ul>
+  <div class="row" style="margin-top:34px">
+    <a href="#quote" class="btn accent">Get a Free Estimate</a>
+    <a href="tel:+15550123456" class="btn ghost">Call (555) 012-3456</a>
+  </div>
+</div></section>
+
+<section id="faq" aria-labelledby="faq-h"><div class="wrap center">
+  <p class="eyebrow">Questions</p>
+  <h2 class="h2" id="faq-h">Answers before you call</h2>
+  <p class="sub">The things people ask us most often, up front.</p>
+</div>
+<div class="wrap"><div class="faq">
+  <details class="q">
+    <summary>Do you charge for estimates?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <div class="a">No. We come out, walk the space with you and give you a written, line-item estimate at no cost. If the project needs design drawings or engineering, we will tell you that up front and what it costs before anything is ordered.</div>
+  </details>
+  <details class="q">
+    <summary>Are you licensed and insured?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <div class="a">Yes — licensed, insured and carrying liability coverage. We are glad to send you a copy of the certificate before work starts, and you should ask any contractor you are considering for the same thing.</div>
+  </details>
+  <details class="q">
+    <summary>How long will my project take?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <div class="a">A drywall repair and repaint is usually a few days. A bathroom typically runs two to four weeks; a kitchen four to eight; an addition several months once permits are issued. Your estimate includes a real start and finish date, and we tell you immediately if a material lead time moves it.</div>
+  </details>
+  <details class="q">
+    <summary>Can I stay in the house during the work?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <div class="a">Almost always, yes. We phase the work so you keep a functioning kitchen or bathroom for as long as possible, seal off the work area to keep dust out of the rest of the house, and clean up at the end of each day.</div>
+  </details>
+  <details class="q">
+    <summary>Do you handle permits?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <div class="a">Yes. For additions, structural changes and most remodels we pull the permits and meet the inspectors ourselves. Permit fees are listed as their own line on your estimate so you can see exactly what they cost.</div>
+  </details>
+  <details class="q">
+    <summary>What happens if something comes up mid-project?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <div class="a">Older homes hide things — rot, old wiring, a wall that turns out to be load-bearing. When we find something, we stop, show you, and give you a written change order with the price before we do the work. Nothing gets added to your invoice that you have not approved.</div>
+  </details>
+  <details class="q">
+    <summary>How do payments work?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+    <div class="a">A deposit to schedule and order materials, then progress payments tied to milestones you can actually see completed, and a final payment after the walkthrough and punch list are done. The full schedule is written into your estimate before you sign anything.</div>
+  </details>
+</div></div></section>
+
+<section id="quote" style="background:#f1ede7;border-top:1px solid var(--line)" aria-labelledby="quote-h"><div class="wrap">
+  <div class="quote">
+    <div>
+      <p class="eyebrow">Free estimate</p>
+      <h2 class="h2" id="quote-h" style="font-size:clamp(27px,4vw,38px)">Tell us about the project</h2>
+      <p class="mut" style="font-size:16px">The more detail you give us, the more accurate the number we can bring to the walkthrough. We answer every message.</p>
+
+      <div class="contact-card" style="margin-top:26px">
+        <h3>Prefer to talk?</h3>
+        <a class="cline" href="tel:+15550123456">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>
+          <span><b>Call or text</b>(555) 012-3456</span>
+        </a>
+        <a class="cline" href="mailto:jupiterconstructionllc@gmail.com?subject=Project%20estimate%20request">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg></span>
+          <span><b>Email</b>jupiterconstructionllc@gmail.com</span>
+        </a>
+        <div class="cline">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <span><b>Hours</b>Mon–Fri 7am–5pm · Sat by appointment</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="quote-form" novalidate>
+      <div class="two">
+        <div class="field">
+          <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email">
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="f-type">Project type</label>
+          <select id="f-type" name="project">
+            <option>Kitchen remodel</option>
+            <option>Bathroom remodel</option>
+            <option>Addition</option>
+            <option>Drywall &amp; repair</option>
+            <option>Painting</option>
+            <option>Installation / finish work</option>
+            <option>Whole-home renovation</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-when">Ideal timeline</label>
+          <select id="f-when" name="timeline">
+            <option>As soon as possible</option>
+            <option>Within 1–3 months</option>
+            <option>3–6 months out</option>
+            <option>Just planning / budgeting</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-addr">Project address or town</label>
+        <input id="f-addr" name="address" type="text" autocomplete="street-address">
+      </div>
+      <div class="field">
+        <label for="f-msg">What are you trying to get done? <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="f-msg" name="message" required placeholder="Rough size, what's there now, what you want instead, and anything you already know about budget."></textarea>
+      </div>
+      <button type="submit" class="btn accent" style="width:100%">Send my project details</button>
+      <p class="form-note" id="form-note">This opens your email app with the details filled in — just hit send. Or
+        <a href="tel:+15550123456" style="color:var(--accent);text-decoration:underline">call (555) 012-3456</a>.</p>
+    </form>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <div class="brand">
+        <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.1" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="7.5"/><ellipse cx="16" cy="16" rx="14.2" ry="4.4" transform="rotate(-22 16 16)"/></svg>
+        <span><span class="n">Jupiter Construction</span><small>LLC</small></span>
+      </div>
+      <p style="margin-top:14px;max-width:34ch">Remodels, additions, drywall, repair and painting. Superior craftsmanship and personalized service, start to finish.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Kitchen &amp; bath remodels</a></li>
+        <li><a href="#services">Additions</a></li>
+        <li><a href="#services">Drywall &amp; repair</a></li>
+        <li><a href="#services">Painting</a></li>
+        <li><a href="#services">Installations &amp; finish work</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+15550123456">(555) 012-3456</a></li>
+        <li><a href="mailto:jupiterconstructionllc@gmail.com">jupiterconstructionllc@gmail.com</a></li>
+        <li>Mon–Fri 7am–5pm</li>
+        <li><a href="#quote">Request a free estimate</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© <span id="yr">2026</span> Jupiter Construction LLC. All rights reserved.</span>
+    <span>Licensed &amp; insured</span>
+  </div>
+</div></footer>
+
+<div class="callbar">
+  <a href="tel:+15550123456" class="btn line">
+    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+    Call
+  </a>
+  <a href="#quote" class="btn accent">Get a Free Estimate</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "GeneralContractor",
+      "@id": "https://www.jupiterconstructionllc.com/#business",
+      "name": "Jupiter Construction LLC",
+      "description": "Construction company specializing in remodels, additions, installations, drywall repair and painting.",
+      "url": "https://www.jupiterconstructionllc.com/",
+      "telephone": "+1-555-012-3456",
+      "email": "jupiterconstructionllc@gmail.com",
+      "priceRange": "$$",
+      "areaServed": "Your city and surrounding areas",
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Construction services",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kitchen and bathroom remodeling"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home additions"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Drywall installation and repair"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Interior and exterior painting"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Installations and finish carpentry"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Whole-home renovation"}}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.jupiterconstructionllc.com/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"Do you charge for estimates?","acceptedAnswer":{"@type":"Answer","text":"No. We come out, walk the space with you and give you a written, line-item estimate at no cost. If the project needs design drawings or engineering, we tell you up front what that costs before anything is ordered."}},
+        {"@type":"Question","name":"Are you licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"Yes — licensed, insured and carrying liability coverage. We are glad to send a copy of the certificate before work starts."}},
+        {"@type":"Question","name":"How long will my project take?","acceptedAnswer":{"@type":"Answer","text":"A drywall repair and repaint is usually a few days. A bathroom typically runs two to four weeks, a kitchen four to eight, and an addition several months once permits are issued. Your estimate includes a real start and finish date."}},
+        {"@type":"Question","name":"Can I stay in the house during the work?","acceptedAnswer":{"@type":"Answer","text":"Almost always. We phase the work so you keep a functioning kitchen or bathroom as long as possible, seal off the work area to contain dust, and clean up at the end of each day."}},
+        {"@type":"Question","name":"Do you handle permits?","acceptedAnswer":{"@type":"Answer","text":"Yes. For additions, structural changes and most remodels we pull the permits and meet the inspectors. Permit fees are listed as their own line on your estimate."}},
+        {"@type":"Question","name":"What happens if something comes up mid-project?","acceptedAnswer":{"@type":"Answer","text":"When we find hidden damage or a surprise, we stop, show you, and give you a written change order with the price before doing the work. Nothing is added to your invoice without your approval."}},
+        {"@type":"Question","name":"How do payments work?","acceptedAnswer":{"@type":"Answer","text":"A deposit to schedule and order materials, progress payments tied to visible milestones, and a final payment after the walkthrough and punch list are complete. The schedule is written into your estimate."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* Mobile menu. <details> already opens and closes on its own — this only adds
+   the two behaviours it lacks: close on link click, and close on Escape/outside. */
+(function () {
+  var menu = document.getElementById('menu');
+  if (!menu) return;
+  function close() { menu.removeAttribute('open'); }
+  menu.addEventListener('click', function (e) { if (e.target.closest('.menu-panel a')) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menu.hasAttribute('open')) { close(); menu.querySelector('summary').focus(); }
+  });
+  document.addEventListener('click', function (e) { if (!menu.contains(e.target)) close(); });
+})();
+
+/* Before/after slider. The range input is the control, so keyboard and screen
+   readers work for free; this just mirrors its value into the --p custom
+   property. With JS off the stage stays at the CSS default of 50%. */
+(function () {
+  var stage = document.getElementById('ba'), range = document.getElementById('ba-range');
+  if (!stage || !range) return;
+  function paint() { stage.style.setProperty('--p', range.value + '%'); }
+  range.addEventListener('input', paint);
+  paint();
+})();
+
+/* Quote form. No backend: build a mailto: with the answers filled in.
+   To collect submissions server-side instead, give the <form> an action and
+   method="post" and delete this block. */
+(function () {
+  var form = document.getElementById('quote-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+    var body = [
+      'Name: ' + v('f-name'),
+      'Phone: ' + v('f-phone'),
+      'Email: ' + (v('f-email') || '—'),
+      'Project type: ' + v('f-type'),
+      'Timeline: ' + v('f-when'),
+      'Address / town: ' + (v('f-addr') || '—'),
+      '',
+      'Details:',
+      v('f-msg')
+    ].join('\n');
+    window.location.href = 'mailto:jupiterconstructionllc@gmail.com'
+      + '?subject=' + encodeURIComponent('Estimate request — ' + v('f-type') + ' — ' + v('f-name'))
+      + '&body=' + encodeURIComponent(body);
+    document.getElementById('form-note').textContent =
+      'Your email app should be opening with the details filled in. If nothing happened, call (555) 012-3456 or email jupiterconstructionllc@gmail.com.';
+  });
+})();
+</script>
+</body>
+</html>
