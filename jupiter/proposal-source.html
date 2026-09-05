@@ -1,0 +1,195 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Jupiter Construction — Proposed Website</title>
+<style>
+  @page{size:Letter;margin:0}
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --ink:#14161a; --mut:#5d626c; --line:#e2ddd5; --paper:#fffdfa;
+    --amber:#a8600c; --amber-lt:#e8a04a; --dark:#0b0e1c; --rust:#8d3524;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  html,body{width:816px;height:1056px}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);
+       font-size:10.4px;line-height:1.5;-webkit-font-smoothing:antialiased;
+       display:flex;flex-direction:column;overflow:hidden}
+  .pad{padding:0 44px}
+
+  /* header band */
+  .top{background:var(--dark);color:#fff;padding:15px 44px;display:flex;
+       align-items:center;justify-content:space-between}
+  .id{display:flex;align-items:center;gap:11px}
+  .id svg{width:29px;height:29px;color:var(--amber-lt)}
+  .id .nm{font-size:16.5px;font-weight:700;letter-spacing:-.2px;line-height:1.15}
+  .id .sb{font-size:8.2px;letter-spacing:2.1px;text-transform:uppercase;color:#9aa2b8;margin-top:2px}
+  .top .rt{text-align:right;font-size:8.4px;letter-spacing:1.9px;text-transform:uppercase;color:#9aa2b8;line-height:1.7}
+  .top .rt b{color:var(--amber-lt);font-weight:600}
+
+  /* hero shot */
+  .shot{position:relative;height:240px;background:var(--dark);flex-shrink:0}
+  .clip{position:absolute;inset:0;overflow:hidden}
+  .clip img{width:100%;display:block;margin-top:-62px}
+  .shot .phone{position:absolute;right:40px;bottom:-40px;width:108px;z-index:2;border:4px solid #1b1f30;
+               border-radius:13px;overflow:hidden;box-shadow:0 10px 26px rgba(11,14,28,.5);background:#000}
+  .shot .phone img{width:100%;display:block}
+
+  /* headline */
+  .lede{padding:26px 44px 0}
+  .lede h1{font-size:25px;font-weight:700;letter-spacing:-.7px;line-height:1.14;max-width:600px}
+  .lede h1 em{font-style:normal;color:var(--amber)}
+  .lede p{color:var(--mut);font-size:11.2px;margin-top:9px;max-width:560px;line-height:1.55}
+
+  .rule{height:1px;background:var(--line);margin:17px 44px 0}
+
+  /* three columns */
+  .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;padding:17px 44px 0}
+  .col h3{font-size:8.4px;letter-spacing:1.8px;text-transform:uppercase;color:var(--amber);font-weight:700;
+          padding-bottom:6px;border-bottom:2px solid var(--amber);display:inline-block;margin-bottom:9px}
+  .col ul{list-style:none}
+  .col li{position:relative;padding-left:12px;margin-bottom:6px;color:#3c4048;line-height:1.5}
+  .col li::before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--amber-lt)}
+  .col li b{color:var(--ink)}
+
+  /* why it wins */
+  .why{padding:19px 44px 0}
+  .why h2{font-size:8.4px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:11px}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  .w{display:flex;gap:9px}
+  .w .n{font-size:19px;font-weight:700;color:var(--line);line-height:1;flex-shrink:0;letter-spacing:-1px}
+  .w h4{font-size:11px;font-weight:700;margin-bottom:3px;letter-spacing:-.15px}
+  .w p{color:var(--mut);line-height:1.5}
+
+  /* spec strip */
+  .spec{margin:19px 44px 0;background:var(--dark);border-radius:9px;padding:14px 8px;
+        display:grid;grid-template-columns:repeat(4,1fr)}
+  .sp{text-align:center;border-right:1px solid rgba(255,255,255,.13)}
+  .sp:last-child{border-right:0}
+  .sp .v{font-size:19px;font-weight:700;color:var(--amber-lt);line-height:1;letter-spacing:-.5px}
+  .sp .k{font-size:8px;letter-spacing:1.4px;text-transform:uppercase;color:#98a0b6;margin-top:5px}
+
+  /* need from you */
+  .need{padding:18px 44px 0;display:grid;grid-template-columns:1.15fr 1fr;gap:30px}
+  .need h2{font-size:8.4px;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut);font-weight:700;margin-bottom:9px}
+  .need ol{list-style:none;counter-reset:n}
+  .need li{counter-increment:n;position:relative;padding-left:19px;margin-bottom:6px;color:#3c4048;line-height:1.5}
+  .need li::before{content:counter(n);position:absolute;left:0;top:0;width:13px;height:13px;border-radius:50%;
+                   background:var(--amber);color:#fff;font-size:7.5px;font-weight:700;
+                   display:flex;align-items:center;justify-content:center}
+  .need li b{color:var(--ink)}
+  .opts{background:#f6f2eb;border:1px solid var(--line);border-radius:9px;padding:13px 15px}
+  .opts h4{font-size:10.4px;font-weight:700;margin-bottom:6px}
+  .opts p{color:var(--mut);line-height:1.5;margin-bottom:8px}
+  .opts .tag{display:inline-block;font-size:8px;letter-spacing:1.2px;text-transform:uppercase;font-weight:700;
+             color:var(--amber);border:1px solid #e5c9a4;background:#fdf6ec;border-radius:20px;padding:3px 9px;margin-right:5px}
+
+  /* footer */
+  .foot{margin-top:auto;background:var(--dark);color:#fff;padding:14px 44px;
+        display:flex;align-items:flex-end;justify-content:space-between}
+  .foot .lb{font-size:8.2px;letter-spacing:1.9px;text-transform:uppercase;color:#98a0b6;margin-bottom:7px}
+  .fill{display:flex;gap:16px}
+  .fill span{display:block;border-bottom:1px solid rgba(255,255,255,.35);width:132px;height:15px}
+  .fill i{display:block;font-style:normal;font-size:7.6px;letter-spacing:1.3px;text-transform:uppercase;
+          color:#7d859b;margin-top:4px}
+  .foot .qr{text-align:right;font-size:8.6px;color:#98a0b6;line-height:1.6;max-width:210px}
+  .foot .qr b{color:#fff;display:block;font-size:10px;margin-bottom:2px}
+</style></head><body>
+
+<div class="top">
+  <div class="id">
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.1"><circle cx="16" cy="16" r="7.5"/><ellipse cx="16" cy="16" rx="14.2" ry="4.4" transform="rotate(-22 16 16)"/></svg>
+    <div><div class="nm">Jupiter Construction LLC</div><div class="sb">Remodels · Additions · Drywall · Paint</div></div>
+  </div>
+  <div class="rt"><b>Proposed Website</b><br>Concept review</div>
+</div>
+
+<div class="shot">
+  <div class="clip"><img src="pitch-desktop.png" alt=""></div>
+  <div class="phone"><img src="pitch-mobile.png" alt=""></div>
+</div>
+
+<div class="lede">
+  <h1>A website built to book jobs — <em>not just to look good.</em></h1>
+  <p>Every element on this page exists to turn a visitor into a phone call. The planet in the header is rendered live in the browser — no stock video, no plugins, nothing to load.</p>
+</div>
+
+<div class="rule"></div>
+
+<div class="cols">
+  <div class="col">
+    <h3>Built to convert</h3>
+    <ul>
+      <li><b>Tap-to-call bar</b> pinned to the bottom of every phone screen</li>
+      <li><b>Estimate form</b> that captures project type, timeline and budget before the first visit</li>
+      <li>Licensed, insured and free-estimate proof <b>above the fold</b></li>
+    </ul>
+  </div>
+  <div class="col">
+    <h3>Built to be found</h3>
+    <ul>
+      <li><b>Structured data</b> for Google — contractor profile plus FAQ rich results</li>
+      <li>Real text content, <b>not an image of a website</b></li>
+      <li>Fast and mobile-first — what local search actually rewards</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h3>Built to last</h3>
+    <ul>
+      <li><b>One self-contained file.</b> No page builder, no plugins, no subscription</li>
+      <li>Nothing to update, nothing to break, no renewal that doubles</li>
+      <li>You own it outright</li>
+    </ul>
+  </div>
+</div>
+
+<div class="why">
+  <h2>Why it wins work</h2>
+  <div class="why-grid">
+    <div class="w"><div class="n">01</div><div>
+      <h4>It answers objections before the call</h4>
+      <p>A seven-question FAQ and a four-step process section handle what actually stalls a remodel decision: cost, timeline, mess and surprises.</p>
+    </div></div>
+    <div class="w"><div class="n">02</div><div>
+      <h4>It proves the work</h4>
+      <p>A drag-to-compare before/after slider shows the change in one gesture. It does more than a photo gallery ever will.</p>
+    </div></div>
+    <div class="w"><div class="n">03</div><div>
+      <h4>It gets remembered</h4>
+      <p>Named after the largest planet in the solar system — so the site opens on one. Nobody else in this market looks like this.</p>
+    </div></div>
+  </div>
+</div>
+
+<div class="spec">
+  <div class="sp"><div class="v">76 KB</div><div class="k">Entire page</div></div>
+  <div class="sp"><div class="v">0</div><div class="k">Plugins &amp; subscriptions</div></div>
+  <div class="sp"><div class="v">$0–5</div><div class="k">Monthly hosting</div></div>
+  <div class="sp"><div class="v">2</div><div class="k">Concepts ready</div></div>
+</div>
+
+<div class="need">
+  <div>
+    <h2>What we need from you to go live</h2>
+    <ol>
+      <li><b>Your phone number and the towns you serve.</b> The service area is the single biggest local-search lever on the site.</li>
+      <li><b>8–12 photos of finished jobs.</b> Phone photos are fine. This is the highest-impact change on the whole page.</li>
+      <li><b>Your license number</b>, if you would like it displayed, plus a business address for the Google listing.</li>
+    </ol>
+  </div>
+  <div class="opts">
+    <h4>Two directions, your choice</h4>
+    <p>The same content and the same conversion tools, in two looks. Pick one, or mix them.</p>
+    <span class="tag">Space</span><span class="tag">Classic</span>
+  </div>
+</div>
+
+<div class="foot">
+  <div>
+    <div class="lb">Presented by</div>
+    <div class="fill">
+      <div><span></span><i>Name</i></div>
+      <div><span></span><i>Phone</i></div>
+      <div><span></span><i>Email</i></div>
+    </div>
+  </div>
+  <div class="qr"><b>Want to see it live?</b>Ask and we will open it on your phone — the planet turns, and the before/after slider moves.</div>
+</div>
+
+</body></html>
